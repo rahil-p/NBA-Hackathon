@@ -145,7 +145,7 @@
 5	12	"Turnover                                "	"Inbound Turnover                        "
 6	4	"Foul                                    "	"Offensive                               "
 7	0	"Violation                               "	"No Violation                            "
-3	0	"No Shot                                 "	
+3	0	"No Shot                                 "	"                                        "
 3	21	"Free Throw                              "	"Free Throw Technical 1 of 2             "
 5	24	"Turnover                                "	"10 Second Violaton                      "
 5	32	"Turnover                                "	"Opposite Basket Turnover                "
