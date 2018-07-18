@@ -85,16 +85,16 @@ def parse_plays(period_plays, period_lineup, game, game_stats):
 
 
 def main():
-    pbp, gl, ec = read_data({'pbp': 'NBA Hackathon - Play by Play Data Sample (50 Games).txt',
-                             'gl':  'NBA Hackathon - Game Lineup Data Sample (50 Games).txt',
-                             'ec':  'NBA Hackathon - Event Codes.txt'})
+    pbp, gl, ec = read_data({'pbp': '../data/NBA Hackathon - Play by Play Data Sample (50 Games).txt',
+                             'gl':  '../data/NBA Hackathon - Game Lineup Data Sample (50 Games).txt',
+                             'ec':  '../data/NBA Hackathon - Event Codes.txt'})
     ec = sort_ec(ec)
     #pbp = sort_pbp(pbp)
 
     stats_dict = parse_games(gl, pbp)
     output_df = get_output(stats_dict)
 
-    output_df.to_csv('Crew_Q1_BBALL.csv', index=False)
+    output_df.to_csv('../data/Crew_Q1_BBALL.csv', index=False)
 
 if __name__ == '__main__':
     main()
