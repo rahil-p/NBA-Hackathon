@@ -140,7 +140,7 @@ def main():
                                              training_set=training, validation_set=validation,
                                              predictor_name='Total_Viewers',
                                              scorer=mape,
-                                             switch=0,
+                                             switch=1,
                                              n_estimators=[1000],
                                              max_features=['auto'],
                                              max_depth=list(range(9,13,1)),
