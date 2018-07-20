@@ -22,6 +22,12 @@ def append_train_test(train, test):
 
     return tt
 
+def split_train_test(tt):
+    train = tt.loc[tt['T'] == 'train']
+    test = tt.loc[tt['T'] == 'test']
+
+    return [train, test]
+
 def dummy_data(data, categorical_vars):
     for var in categorical_vars:
         dummies = pd.get_dummies(data[var], prefix = var, dummy_na=False)
