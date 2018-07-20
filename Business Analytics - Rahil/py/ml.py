@@ -1,5 +1,3 @@
-from sklearn.ensemble import RandomForestRegressor
-
 import pandas as pd
 import numpy as np
 import functools, itertools, operator
@@ -61,11 +59,11 @@ def suggest_hyperparameters(model_type,
             start_time = time.time()
 
             model_parameters = dict(zip(hp_names, hyperparameter))
-            _, _, metric, train_metric = fit_predict_assess(model_type=RandomForestRegressor,
+            _, _, metric, train_metric = fit_predict_assess(model_type=model_type,
                                                             training_set=training_set,
                                                             validation_set=validation_set,
-                                                            predictor_name='Total_Viewers',
-                                                            scorer=mape,
+                                                            predictor_name=predictor_name,
+                                                            scorer=scorer,
                                                             **model_parameters)
             model_parameters['Train_Accuracy'] = train_metric
             model_parameters['Validation_Accuracy'] = metric
