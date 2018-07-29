@@ -1,3 +1,3 @@
 # Basketball Analytics
 
-*Documentation in progress*
+*Documentation redacted*
